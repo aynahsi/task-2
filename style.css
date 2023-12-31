@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.step-header {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.step {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+.fields-selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fields-buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+#cancelButton {
+    background-color: #d9534f;
+}
+
+#nextButton {
+    background-color: #5bc0de;
+}
+
+select[multiple] {
+    height: auto;
+    min-height: 120px;
+}
+
+
+#data-preview {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#data-preview th,
+#data-preview td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#data-preview th {
+  background-color: #f2f2f2;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Import Products</h1>
+        <div class="step">
+            <div class="step-header">Step 1: Select File</div>
+            <input type="file" id="fileUpload" accept=".json,.csv" />
+            <p>Supported File Type(s): .CSV, .JSON</p>
+        </div>
+
+        <div class="step">
+            <div class="step-header">Step 2: Specify Format</div>
+            <label for="fileType">File Type</label>
+            <select id="fileType">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+            </select>
+
+            <label for="encoding">Character Encoding</label>
+            <select id="encoding">
+                <option value="utf8">UTF-8</option>
+                <!-- Add more options if needed -->
+            </select>
+
+            <label for="delimiter">Delimiter</label>
+            <select id="delimiter">
+                <option value=",">Comma</option>
+                <!-- Add more options if needed -->
+            </select>
+
+            <label>
+                <input type="checkbox" id="hasHeader" checked>
+                Has Header
+            </label>
+        </div>
+
+        <div class="step">
+            <div class="step-header">Step 3: Display Handling</div>
+            <div class="fields-selection">
+                <div>
+                    <label>Available Fields</label>
+                    <select id="availableFields" multiple size="8">
+                        <!-- Options will be dynamically populated -->
+                    </select>
+                </div>
+                <div class="fields-buttons">
+                    <button type="button" id="addField">>></button>
+                    <button type="button" id="removeField">
+                        << </button>
+                </div>
+                <div>
+                    <label>Fields to be Displayed</label>
+                    <select id="displayFields" multiple size="8">
+                        <!-- Options will be dynamically populated -->
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button type="button" id="nextButton">Next</button>
+        <button type="button" id="cancelButton">Cancel</button>
+    </div>
+
+    <div class="import-step">
+        <h2>Step 4: Data Preview</h2>
+        <table id="data-preview">
+            <thead>
+                <tr>
+                    <!-- Table headers will be dynamically populated -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table data will be dynamically populated -->
+            </tbody>
+        </table>
+    </div>
+
+
+  
+    <script src="script.js"></script>
+</body>
+
+</html>
